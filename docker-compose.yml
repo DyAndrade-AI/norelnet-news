@@ -1,0 +1,50 @@
+services:
+  mongo:
+    image: mongo:7
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    environment:
+      MONGO_INITDB_DATABASE: mt
+
+  redis:
+    image: redis:7-alpine
+    container_name: terruno-redis
+    ports: ["6379:6379"]
+    volumes: [redisdata:/data]
+    restart: unless-stopped
+
+  api:
+    build:
+      context: ./backend
+    container_name: api
+    env_file:
+      - ./backend/.env
+    environment:
+      - PORT=3000
+    depends_on:
+      - mongo
+      - redis
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./backend/src:/app/src:rw
+      - ./backend/package.json:/app/package.json:ro
+    command: ["npm","run","dev"]
+
+  fronted:
+    build:
+      context: ./fronted
+    container_name: fronted
+    restart: unless-stopped
+    depends_on:
+      - api
+    ports:
+      - "8080:80"             # Front disponible en http://localhost:8080
+    # healthcheck heredado del Dockerfile
+
+volumes:
+  mongo_data:
+  redisdata:
