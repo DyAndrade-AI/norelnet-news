@@ -43,4 +43,4 @@ El sistema mostrará noticias recientes con almacenamiento distribuido:
 
 ---
 ## Tablero de tareas Kanban
-
+https://github.com/users/DyAndrade-AI/projects/1
