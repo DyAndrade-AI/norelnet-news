@@ -5,7 +5,7 @@ Proyecto colaborativo de la Universidad de Guanajuato.
 
 ## Integrantes
 - **Daniel Yahir Andrade Herrera**
-- **Jorge Andrés López Romero**
+- **Jorge Andrés López Romero** (YO)
 - **José Miguel Fonseca Córdoba**
 
 ---
