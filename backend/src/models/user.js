@@ -1,12 +1,36 @@
 import mongoose from "mongoose";
 
-// Representa usuarios del panel; passwords se guardan como hash bcrypt.
+const userSchema = new mongoose.Schema({
+  nombre: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+    lowercase: true,
+    trim: true
+  },
+  password_hash: {
+    type: String,
+    required: true
+  },
+  rol: {
+    type: String,
+    enum: ["lector", "editor", "admin"],
+    default: "lector"
+  },
+  fecha_registro: {
+    type: Date,
+    default: Date.now
+  }
+}, { 
+  timestamps: true // agrega automáticamente createdAt y updatedAt
+});
 
-const UserSchema = new mongoose.Schema({
-  email: { type: String, unique: true, required: true, lowercase: true, index: true },
-  passwordHash: { type: String, required: true },
-  role: { type: String, enum: ["viewer", "editor", "admin"], default: "viewer" },
-  name: { type: String, required: true },
-}, { timestamps: true });
+// indice para optimizar login
+userSchema.index({ email: 1 });
 
-export default mongoose.model("User", UserSchema);
+export const User = mongoose.model("User", userSchema);
