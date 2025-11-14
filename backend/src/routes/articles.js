@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { list, getById, create, update, remove } from "../controllers/categoryController.js";
+import { list, getById, create, update, remove, getRecent, getByAutor} from "../controllers/articleController.js";
 
 const router = Router();
 
@@ -9,5 +9,9 @@ router.get("/:id", getById);
 router.post("/", create);
 router.patch("/:id", update);
 router.delete("/:id", remove);
+
+// Rutas adicionales
+router.get("/recent", getRecent);
+router.get("/author/:autorId", getByAutor);
 
 export default router;
