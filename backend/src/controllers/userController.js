@@ -39,7 +39,8 @@ export async function getById(req, res, next) {
  */
 export async function create(req, res, next) {
   try {
-    const { nombre, email, password, rol } = req.body;
+    const nombre = req.body.nombre ?? req.body.name;
+    const { email, password, rol } = req.body;
     
     // Validación básica
     if (!nombre || !email || !password) {
@@ -150,17 +151,28 @@ export async function login(req, res, next) {
     }
     
     const user = await UserService.verifyPassword(email, password);
-    
+
     if (!user) {
       return res.status(401).json({ error: "Credenciales inválidas" });
     }
-    
-    // NOTA: Aquí el compañero que trabaje con rutas y middlewares
-    // debe implementar la creación de sesión con Redis
-    // Por ahora solo devolvemos el usuario
-    res.json({ 
+
+    req.session.user = {
+      _id: user._id,
+      nombre: user.nombre,
+      email: user.email,
+      rol: user.rol,
+    };
+
+    await new Promise((resolve, reject) => {
+      req.session.save((err) => {
+        if (err) return reject(err);
+        resolve();
+      });
+    });
+
+    res.json({
       message: "Login exitoso",
-      user 
+      user
     });
   } catch (err) {
     next(err);
@@ -185,7 +197,7 @@ export async function getProfile(req, res, next) {
       return res.status(404).json({ error: "Usuario no encontrado" });
     }
     
-    res.json(user);
+    res.json({ user });
   } catch (err) {
     next(err);
   }
@@ -260,9 +272,18 @@ export async function getByRol(req, res, next) {
  */
 export async function logout(req, res, next) {
   try {
-    // NOTA: El compañero que trabaje con rutas y middlewares
-    // debe implementar la destrucción de sesión con Redis aquí
-    
+    if (!req.session) {
+      return res.json({ message: "Logout exitoso" });
+    }
+
+    await new Promise((resolve, reject) => {
+      req.session.destroy((err) => {
+        if (err) return reject(err);
+        resolve();
+      });
+    });
+
+    res.clearCookie(process.env.SESSION_NAME || "sid");
     res.json({ message: "Logout exitoso" });
   } catch (err) {
     next(err);

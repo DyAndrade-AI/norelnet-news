@@ -4,15 +4,16 @@ import { createClient } from "redis";
 
 // Configuración centralizada de sesión para que Express y Redis hablen el mismo idioma.
 
+// Valores por defecto seguros para desarrollo cuando las variables de entorno no existen.
 const {
-  SESSION_NAME = `${SESSION_NAME}`,
-  SESSION_SECRET = `${SESSION_SECRET}`,
+  SESSION_NAME = "sid",
+  SESSION_SECRET = "change-me",
   SESSION_DOMAIN,
-  SESSION_SECURE = `${SESSION_SECURE}`,
-  SESSION_SAMESITE = `${SESSION_SAMESITE}`,
-  SESSION_MAXAGE_MS = `${SESSION_MAXAGE_MS}`,
-  REDIS_URL = `${REDIS_URL}`,
-  TRUST_PROXY = `${TRUST_PROXY}`,
+  SESSION_SECURE = "false",
+  SESSION_SAMESITE = "lax",
+  SESSION_MAXAGE_MS = "86400000", // 24 horas
+  REDIS_URL = "redis://127.0.0.1:6379",
+  TRUST_PROXY = "false",
 } = process.env;
 
 export const redisClient = createClient({ url: REDIS_URL });
@@ -30,6 +31,8 @@ export function trustProxy(app) {
   if (TRUST_PROXY === "true") app.set("trust proxy", 1);
 }
 
+const parsedMaxAge = Number.parseInt(SESSION_MAXAGE_MS, 10);
+
 export const sessionMiddleware = session({
   name: SESSION_NAME,
   secret: SESSION_SECRET,
@@ -39,8 +42,8 @@ export const sessionMiddleware = session({
   cookie: {
     httpOnly: true,
     secure: SESSION_SECURE === "true",
-    sameSite: SESSION_SAMESITE, 
-    maxAge: parseInt(SESSION_MAXAGE_MS, 10),
-    domain: SESSION_DOMAIN || undefined, 
+    sameSite: SESSION_SAMESITE || "lax",
+    maxAge: Number.isNaN(parsedMaxAge) ? 86400000 : parsedMaxAge,
+    domain: SESSION_DOMAIN || undefined,
   },
 });
