@@ -1,21 +1,40 @@
 import { Router } from "express";
-import {list, getById, create, update, remove, login, getProfile, changePassword, getByRol, logout} from "../controllers/userController.js";
+import {
+  list,
+  getById,
+  create,
+  update,
+  remove,
+  login,
+  getProfile,
+  changePassword,
+  getByRol,
+  logout
+} from "../controllers/userController.js";
+import {
+  requireAdmin,
+  requireAuth,
+  requireSelfOrAdmin
+} from "../middlewares/auth.js";
 
 const router = Router();
 
-//CRUD para gestion de usuarios
-
-router.get("/", list); //Probablemente restringido a Admin
-router.get("/:id", getById);
-router.post("/", create);
-router.patch("/:id", update);
-router.delete("/:id", remove);
-
-//Rutas adicionales
+// Registro y autenticación
+router.post("/register", create);
 router.post("/login", login);
-router.post("/logout", logout);
-router.get("/profile", getProfile);
-router.post("/change-password", changePassword);
-router.get("/role/:rol", getByRol); //Probablemente restringido a Admin
+router.post("/logout", requireAuth, logout);
+
+// Perfil del usuario autenticado
+router.get("/profile", requireAuth, getProfile);
+router.post("/change-password", requireAuth, changePassword);
+
+// Administración de usuarios
+router.get("/", requireAdmin, list);
+router.get("/role/:rol", requireAdmin, getByRol);
+router.delete("/:id", requireAdmin, remove);
+
+// Acciones sobre un usuario específico (propio o admin)
+router.get("/:id", requireSelfOrAdmin(), getById);
+router.put("/:id", requireSelfOrAdmin(), update);
 
 export default router;

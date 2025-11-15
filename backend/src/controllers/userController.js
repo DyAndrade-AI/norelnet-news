@@ -1,4 +1,5 @@
 import { UserService } from "../services/userService.js";
+import { SESSION_COOKIE_NAME, SESSION_COOKIE_OPTIONS } from "../middlewares/session.js";
 
 /**
  * Listar todos los usuarios (sin contraseñas)
@@ -155,12 +156,20 @@ export async function login(req, res, next) {
       return res.status(401).json({ error: "Credenciales inválidas" });
     }
     
-    // NOTA: Aquí el compañero que trabaje con rutas y middlewares
-    // debe implementar la creación de sesión con Redis
-    // Por ahora solo devolvemos el usuario
-    res.json({ 
-      message: "Login exitoso",
-      user 
+    const sessionUser = {
+      _id: user._id?.toString(),
+      nombre: user.nombre,
+      email: user.email,
+      rol: user.rol
+    };
+    
+    req.session.regenerate((err) => {
+      if (err) return next(err);
+      req.session.user = sessionUser;
+      res.json({
+        message: "Login exitoso",
+        user: sessionUser
+      });
     });
   } catch (err) {
     next(err);
@@ -260,10 +269,15 @@ export async function getByRol(req, res, next) {
  */
 export async function logout(req, res, next) {
   try {
-    // NOTA: El compañero que trabaje con rutas y middlewares
-    // debe implementar la destrucción de sesión con Redis aquí
+    if (!req.session) {
+      return res.json({ message: "Logout exitoso" });
+    }
     
-    res.json({ message: "Logout exitoso" });
+    req.session.destroy((err) => {
+      if (err) return next(err);
+      res.clearCookie(SESSION_COOKIE_NAME, SESSION_COOKIE_OPTIONS);
+      res.json({ message: "Logout exitoso" });
+    });
   } catch (err) {
     next(err);
   }
