@@ -1,0 +1,695 @@
+[
+  {
+    "titulo": "Amplían hasta 30 de noviembre preregistro para apoyo federal a productores de maíz en Guanajuato",
+    "contenido": "Salamanca, Gto.- El delegado de la SADER en Guanajuato, Justino Arriaga Rojas, dijo que el plazo para que productores de maíz del Estado de Guanajuato realicen el pre registro para recibir el apoyo de 800 pesos por tonelada del gobierno federal se amplió hasta el 30 de noviembre, luego de que se había dado como primera fecha de cierre el 14 de noviembre; hasta este momento ya se tiene el registro de 5 mil agricultores. Además invita a que se registre las bodegas que participan en este programa y ellos tienen como fecha límite el 21 de noviembre.\nEl funcionario federal dijo que ahora los productores de maíz del Estado de Guanajuato tienen hasta el 30 de noviembre para realizar el pre registro en la plataforma que está en la página de la Secretaría de Agricultura; lo que es una buena noticia, porque en el primer aviso el plazo vencía el 14 de noviembre., esa fecha no será así, se amplió el plazo.",
+    "autor": {
+      "id": {"$oid": "6567a1b2c3d4e5f678901235"},
+      "nombre": "Cuca Dominguez"
+    },
+    "categoria": "Política",
+    "etiquetas": ["maíz", "agricultura", "apoyo federal"],
+    "fecha_publicacion": {"$date": "2025-11-13T15:30:00Z"},
+    "imagen_url": null
+  },
+
+  {
+  "titulo": "Diputados de Guanajuato solicitan protección ante situaciones de riesgo",
+  "contenido": "Los diputados de Guanajuato informaron que han solicitado medidas de protección ante situaciones de riesgo, mientras el Congreso analiza cada caso. El diputado y presidente del Congreso del estado de Guanajuato, Roberto Carlos Terán Ramos, informó que, hasta el momento, algunos legisladores han solicitado protección por ciertas situaciones de riesgo. Sin embargo, Terán Ramos enfatizó que se debe garantizar la seguridad no solo de los legisladores, sino también de los alcaldes. Esto, añadió, luego de que se registraran los lamentables sucesos en los que perdió la vida el presidente municipal de Paracho, Michoacán, Carlos Manzo, por lo que incluso el tema de seguridad fue tratado en la agenda del Congreso.",
+  "autor": {
+    "id": "63739a2d80583b48877c8f5b",
+    "nombre": "Enrique Pérez"
+  },
+  "categoria": "Política",
+  "etiquetas": ["Seguridad", "Congreso GTO", "Diputados", "Guanajuato"],
+  "fecha_publicacion": "2025-11-13T18:00:00.000Z",
+  "imagen_url": null
+},
+
+{
+  "titulo": "Animalistas rescatan a un perro encadenado en el barrio de Cata en Guanajuato",
+  "contenido": "Rescatan en Mineral de Cata, en Guanajuato, a un can en situación de abandono y encadenado; aseguran que el operativo fue de difícil acceso por parte de Tlacuatzin Rescue. Después de varios días de agonía, la asociación rescatista Tlacuatzin Rescue logró recuperar a un perro en el barrio de Cata, donde las condiciones de vivienda no eran las óptimas, tras una denuncia anónima.",
+  "autor": {
+    "id": "63739b1a80583b48877c8f6a",
+    "nombre": "Eduardo Chowell"
+  },
+  "categoria": "Cultura",
+  "etiquetas": ["Rescate Animal", "Maltrato Animal", "Guanajuato Capital", "Tlacuatzin Rescue", "Cata"],
+  "fecha_publicacion": "2025-11-12T17:00:00.000Z",
+  "imagen_url": null
+},
+
+{
+  "titulo": "Katy, la orangután que marcó generaciones en el Zoo León, fallece a los 43 años",
+  "contenido": "Durante más de tres décadas, Katy, una orangután de Borneo (Pongo pygmaeus), llenó de asombro, ternura y admiración a miles de visitantes. Hoy, el Zoológico de León informa el fallecimiento de quien fuera un símbolo de fortaleza, nobleza y emblema incansable del respeto hacia la vida silvestre. En sus últimos años presentó complicaciones propias de su edad avanzada, además de una enfermedad cardíaca preexistente que, pese a la atención médica especializada y al monitoreo permanente, deterioraron de manera irreversible su salud. Katy falleció el 12 de noviembre, a los 43 años, dejando un profundo sentimiento de pérdida entre quienes la cuidaron y admiraron.",
+  "autor": {
+    "id": "63739fa480583b48877c8f7e",
+    "nombre": "Staff Correo"
+  },
+  "categoria": "Cultura",
+  "etiquetas": ["Zoo León", "León", "Obituario", "Animales", "Katy"],
+  "fecha_publicacion": "2025-11-13T14:00:00.000Z",
+  "imagen_url": null
+},
+
+{
+  "titulo": "Lo que no sabías del Festival del Globo: curiosidades, récords y anécdotas",
+  "contenido": "El Festival del Globo es uno de los festivales más esperados de finales del año, esta edición planea romper los récords de globos aerostáticos y de asistentes. Esta edición será del 14 al 17 de noviembre, con presentaciones estelares de Gloria Trevi, Afrojack, Dimitry Vegas y Carin León; además de diferentes actividades, artistas nacientes y mucho más.",
+  "autor": {
+    "id": "6373a0c280583b48877c8f9f",
+    "nombre": "MaríaRS"
+  },
+  "categoria": "Cultura",
+  "etiquetas": ["Festival del Globo", "FIG 2025", "León", "Turismo", "Música"],
+  "fecha_publicacion": "2025-11-13T15:00:00.000Z",
+  "imagen_url": null
+},
+
+{
+  "titulo": "¿Por qué las tiendas en línea se saturan mientras las físicas lucen vacías en el Buen Fin de Irapuato?",
+  "contenido": "Con poca afluencia de clientes en negocios formales pero saturación en tiendas en línea, inició el programa Buen Fin en Irapuato. Aparatos eléctricos, digitales, telefonía celular y alimentos fueron los artículos que más llamaron lación de compradores. Usuarios reportaron tardar hasta dos horas para concretar compras en línea.",
+  "autor": {
+    "id": "6373a14e80583b48877c8fb2",
+    "nombre": "Nancy Venegas"
+  },
+  "categoria": "Economía",
+  "etiquetas": ["Buen Fin", "Irapuato", "Comercio Electrónico", "Economía Local", "Ventas"],
+  "fecha_publicacion": "2025-11-13T19:00:00.000Z",
+  "imagen_url": null
+},
+
+{
+  "titulo": "Falta de alumbrado pone en riesgo a vecinos de Villas de Irapuato y Cuchicuato",
+  "contenido": "Entre penumbras arriesgan su vida a diario los automovilistas y peatones que circulan por el camino que conecta el fraccionamiento Villas de Irapuato con la comunidad de Cuchicuato, donde desde hace semanas no hay alumbrado público. Vecinos denunciaron la falta de alumbrado en Irapuato, específicamente en dicho camino.",
+  "autor": {
+    "id": "6373a14e80583b48877c8fb2",
+    "nombre": "Nancy Venegas"
+  },
+  "categoria": "Política",
+  "etiquetas": ["Seguridad", "Irapuato", "Alumbrado Público", "Villas de Irapuato", "Cuchicuato", "Denuncia Ciudadana"],
+  "fecha_publicacion": "2025-11-12T20:00:00.000Z",
+  "imagen_url": null
+},
+
+{
+  "titulo": "Irapuato celebra su identidad culinaria en el segundo día del Festival de la Fresa",
+  "contenido": "En Irapuato, la tradición de la fresa no solo florece en los campos, sino también en la cocina. Desde enchiladas y pizzas hasta hamburguesas y bebidas, los establecimientos locales continúan innovando con este fruto que se ha convertido en el símbolo de la ciudad. Entre las propuestas más reconocidas destacan las enchiladas de fresa del restaurante Santiaguino, un platillo que fusiona lo tradicional con el toque dulce y distintivo de Irapuato, logrando un equilibrio entre sabor, identidad y creatividad culinaria.",
+  "autor": {
+    "id": "6373a1ef80583b48877c8fc5",
+    "nombre": "Anna Maciel"
+  },
+  "categoria": "Cultura",
+  "etiquetas": ["Festival de la Fresa", "Irapuato", "Gastronomía", "Cultura Local", "Fresas"],
+  "fecha_publicacion": "2025-11-09T18:00:00.000Z",
+  "imagen_url": null
+},
+
+{
+  "titulo": "Tres alumnos del SABES de Salamanca logran bronce en la INFOMATRIX Sudamérica 2025",
+  "contenido": "Orgullosos y satisfechos regresaron de Colombia los estudiantes del SABES La Campana, tras obtener la medalla de bronce en la competencia INFOMATRIX Sudamérica 2025 con su proyecto Sangre de Dragón. Los tres jóvenes señalaron que esta experiencia les abrió otro panorama para seguirse superando. El SABES La Campana se localiza en la comunidad El Estanco, dentro del Área Natural Protegida (ANP) Alto Río Temascatío, atendiendo a jóvenes de más de 10 comunidades.",
+  "autor": {
+    "id": "6373a25f80583b48877c8fd8",
+    "nombre": "Yadira Cárdenas"
+  },
+  "categoria": "Ciencia",
+  "etiquetas": ["SABES", "Salamanca", "Educación", "INFOMATRIX", "Ciencia", "Concurso"],
+  "fecha_publicacion": "2025-11-14T15:15:00.000Z",
+  "imagen_url": null
+},
+
+{
+  "titulo": "Estudiantes de ingeniería de Salamanca compiten en la carrera Crazy Cars 2L25",
+  "contenido": "Jóvenes universitarios estudiantes de ingeniería pusieron a prueba su creatividad y conocimiento con el desarrollo de vehículos no motorizados para la carrera anual Crazy Cars 2025, organizada por la División de Ingenierías (DICIS) de la UG. La Sección Estudiantil ASME–SOMIM de la División de Ingenierías, Campus Irapuato–Salamanca, de la Universidad de Guanajuato, llevó a cabo el evento para incentivar en los estudiantes el interés por la aplicación práctica de los conocimientos de ingeniería.",
+  "autor": {
+    "id": "6373a25f80583b48877c8fd8",
+    "nombre": "Yadira Cárdenas"
+  },
+  "categoria": "Tecnología",
+  "etiquetas": ["Universidad de Guanajuato", "DICIS", "Salamanca", "Ingeniería", "Crazy Cars", "Estudiantes"],
+  "fecha_publicacion": "2025-11-12T16:00:00.000Z",
+  "imagen_url": null
+},
+
+{
+  "titulo": "Aumento al transporte de Salamanca no es oficial; multan a unidades por cobrar sin permiso",
+  "contenido": "En tanto el Periódiodo Oficial del Gobierno del Estado no publique el acuerdo del Ayuntamiento sobre el incremento al pasaje del transporte público en Salamanca, este no entrará en vigor. Incluso se han aplicado 26 multas y cuatro unidades han sido retenidas en el corralón por aumentar el costo sin autorización. Se indicó que, ante la falta de publicación del acuerdo del Ayuntamiento en el Periódico Oficial del Estado —seguramente debido a la carga de trabajo—, será hasta que se difunda cuando el acuerdo pueda entrar en vigor.",
+  "autor": {
+    "id": "6373a2ca80583b48877c8fec",
+    "nombre": "Cuca Domínguez"
+  },
+  "categoria": "Política",
+  "etiquetas": ["Transporte Público", "Salamanca", "Tarifas", "Gobierno Municipal", "Multas"],
+  "fecha_publicacion": "2025-11-14T17:30:00.000Z",
+  "imagen_url": null
+},
+
+{
+  "titulo": "Activan precontingencia ambiental por dióxido de azufre en Salamanca",
+  "contenido": "Ni el intenso viento frío que se registró este lunes logró dispersar la contaminación ambiental. A las 16:30 horas, el Comité Técnico de Contingencia activó precontingencia en Salamanca por altas concentraciones de dióxido de azufre (SO₂), la tercera en lo que va del año. Además, la red de monitoreo estatal indica que en Celaya se tiene una calidad del aire extremadamente mala, pero por partículas menores a 10 micras (PM10). En el caso de Salamanca, se activó la precontingencia ambiental luego de que las concentraciones de SO₂ alcanzaron 118.23 partes por billón (ppb) en el promedio móvil y 196.21 ppb en el promedio horario, de acuerdo con la estación de medición Cruz Roja.",
+  "autor": {
+    "id": "6373a2ca80583b48877c8fec",
+    "nombre": "Cuca Domínguez"
+  },
+  "categoria": "Ciencia",
+  "etiquetas": ["Medio Ambiente", "Salamanca", "Contaminación", "Dióxido de Azufre", "SO2", "Calidad del Aire", "Celaya"],
+  "fecha_publicacion": "2025-11-10T16:30:00.000Z",
+  "imagen_url": null
+},
+
+{
+  "titulo": "Realizan primera Feria Infantil de los Libros en Centro de Atención para los Adolescente de San Miguel",
+  "contenido": "El Centro de Atención para los Adolescente de San Miguel de Allende (CASA A.C.) llevó a cabo su primera Feria Infantil de los Libros que buscará posicionarse y crecer año con año como parte de uno de los programas medulares de la asociación que se ha preocupado siempre por fomentar el hábito de la lectura desde la primera infancia. Con la participación de más de 300 alumnos de tres distintos planteles educativos del municipio, CASA dio inicio a este proyecto que en su primera edición ofrece talleres y actividades recreativas durante los días 13 y 14 de noviembre, además de albergar en sus instalaciones un pabellón de venta de libros y manualidades.",
+  "autor": {
+    "id": "6373a32f80583b48877c8ffc",
+    "nombre": "Ingrid Devesa"
+  },
+  "categoria": "Cultura",
+  "etiquetas": ["San Miguel de Allende", "Cultura", "Libros", "Educación", "Feria del Libro", "CASA"],
+  "fecha_publicacion": "2025-11-14T18:00:00.000Z",
+  "imagen_url": null
+},
+
+{
+  "titulo": "Realizan primera Feria Infantil de los Libros en Centro de Atención para los Adolescente de San Miguel",
+  "contenido": "El Centro de Atención para los Adolescente de San Miguel de Allende (CASA A.C.) llevó a cabo su primera Feria Infantil de los Libros que buscará posicionarse y crecer año con año como parte de uno de los programas medulares de la asociación que se ha preocupado siempre por fomentar el hábito de la lectura desde la primera infancia. Con la participación de más de 300 alumnos de tres distintos planteles educativos del municipio, CASA dio inicio a este proyecto que en su primera edición ofrece talleres y actividades recreativas durante los días 13 y 14 de noviembre, además de albergar en sus instalaciones un pabellón de venta de libros y manualidades.",
+  "autor": {
+    "id": "6373a32f80583b48877c8ffc",
+    "nombre": "Ingrid Devesa"
+  },
+  "categoria": "Cultura",
+  "etiquetas": ["San Miguel de Allende", "Cultura", "Libros", "Educación", "Feria del Libro", "CASA"],
+  "fecha_publicacion": "2025-11-14T18:00:00.000Z",
+  "imagen_url": null
+},
+
+{
+  "titulo": "Realizan primera Feria Infantil de los Libros en Centro de Atención para los Adolescente de San Miguel",
+  "contenido": "El Centro de Atención para los Adolescente de San Miguel de Allende (CASA A.C.) llevó a cabo su primera Feria Infantil de los Libros que buscará posicionarse y crecer año con año como parte de uno de los programas medulares de la asociación que se ha preocupado siempre por fomentar el hábito de la lectura desde la primera infancia. Con la participación de más de 300 alumnos de tres distintos planteles educativos del municipio, CASA dio inicio a este proyecto que en su primera edición ofrece talleres y actividades recreativas durante los días 13 y 14 de noviembre, además de albergar en sus instalaciones un pabellón de venta de libros y manualidades.",
+  "autor": {
+    "id": "6373a32f80583b48877c8ffc",
+    "nombre": "Ingrid Devesa"
+  },
+  "categoria": "Cultura",
+  "etiquetas": ["San Miguel de Allende", "Cultura", "Libros", "Educación", "Feria del Libro", "CASA"],
+  "fecha_publicacion": "2025-11-14T18:00:00.000Z",
+  "imagen_url": null
+},
+
+{
+  "titulo": "Realizan primera Feria Infantil de los Libros en Centro de Atención para los Adolescente de San Miguel",
+  "contenido": "El Centro de Atención para los Adolescente de San Miguel de Allende (CASA A.C.) llevó a cabo su primera Feria Infantil de los Libros que buscará posicionarse y crecer año con año como parte de uno de los programas medulares de la asociación que se ha preocupado siempre por fomentar el hábito de la lectura desde la primera infancia. Con la participación de más de 300 alumnos de tres distintos planteles educativos del municipio, CASA dio inicio a este proyecto que en su primera edición ofrece talleres y actividades recreativas durante los días 13 y 14 de noviembre, además de albergar en sus instalaciones un pabellón de venta de libros y manualidades.",
+  "autor": {
+    "id": "6373a32f80583b48877c8ffc",
+    "nombre": "Ingrid Devesa"
+  },
+  "categoria": "Cultura",
+  "etiquetas": ["San Miguel de Allende", "Cultura", "Libros", "Educación", "Feria del Libro", "CASA"],
+  "fecha_publicacion": "2025-11-14T18:00:00.000Z",
+  "imagen_url": null
+},
+
+{
+  "titulo": "Jóvenes de San Miguel de Allende se suman a protesta ‘Generación Z’ para exigir cambios al gobierno",
+  "contenido": "Jóvenes de San Miguel de Allende se sumarán a la manifestación nacional denominada “Generación Z”, que tendrá lugar este sábado 15 de noviembre en distintos puntos del país y que, en San Miguel de Allende, se realizará en la explanada del Jardín Principal en punto de las 6 de la tarde. A través de redes sociales se ha convocado a participar en la protesta pacífica, en la que señalan que el objetivo es “mostrar la inconformidad del pueblo ante el mal manejo del gobierno municipal, pero también levantar la voz por el estado y la República entera”.",
+  "autor": {
+    "id": "6373a32f80583b48877c8ffc",
+    "nombre": "Ingrid Devesa"
+  },
+  "categoria": "Política",
+  "etiquetas": ["Protesta", "Generación Z", "San Miguel de Allende", "Gobierno Municipal", "Política"],
+  "fecha_publicacion": "2025-11-13T18:30:00.000Z",
+  "imagen_url": null
+},
+
+{
+  "titulo": "Arranca en Celaya el 8º Festival de la Cajeta con récord de expositores",
+  "contenido": "Celaya abrió este jueves las puertas de su 8vo. Festival de la Cajeta, una celebración que llenó de ambiente festivo el centro histórico y confirmó, una vez más, su fama como “la ciudad más dulce del mundo”. El evento se realizará del 13 al 16 de noviembre. Aunque la inauguración oficial se llevó a cabo en el Jardín Principal, donde están instalados 170 expositores —entre fabricantes de cajeta, artesanos, cocineras tradicionales y comerciantes—, las verdaderas postales de fiesta se vivieron en el Andador Góngora y en la icónica Bola del Agua, donde cientos de visitantes disfrutaron del tradicional dulce elaborado con leche de cabra.",
+  "autor": {
+    "id": "6373a38f80583b48877c900e",
+    "nombre": "Luz Zárate"
+  },
+  "categoria": "Cultura",
+  "etiquetas": ["Festival de la Cajeta", "Celaya", "Gastronomía", "Cultura Local", "Turismo"],
+  "fecha_publicacion": "2025-11-13T17:00:00.000Z",
+  "imagen_url": null
+},
+
+{
+  "titulo": "Lluvias de 2025 no recuperan mantos freáticos profundos en Silao; preocupa calidad del agua",
+  "contenido": "El buen temporal de lluvias este año en Silao ayudó a la recuperación de los mantos freáticos superficiales como las presas y vasos de captación, no así a los mantos profundos donde ya se extrae agua hasta 400 metros de profundidad. Así lo informó el presidente del Consejo Técnico de Acuífero de Silao, Salvador Guerrero González, al referir que este 2025 ha sido un año muy bueno, con lluvias muy buenas que ayudan a retroalimentar los mantos freáticos, sobre todo los superficiales e intermedios como son las presas, represas, vasos captadores de agua.",
+  "autor": {
+    "id": "6373a3ee80583b48877c901d",
+    "nombre": "J.Cruz Sánchez"
+  },
+  "categoria": "Ciencia",
+  "etiquetas": ["Medio Ambiente", "Silao", "Mantos Acuíferos", "Agua", "Lluvias 2025", "Sostenibilidad"],
+  "fecha_publicacion": "2025-11-14T19:00:00.000Z",
+  "imagen_url": null
+},
+
+
+{
+  "titulo": "Prevén alza de 11% al salario mínimo en 2026",
+  "contenido": "El salario mínimo podría registrar un incremento del 11 por ciento en 2026 con el fin de ubicarse en 309.50 pesos por día, informó Banamex. De acuerdo con el banco el alza para 2026 estaría en línea con los comentarios de la Presidenta Claudia Sheinbaum, quien señaló que el aumento de 2026 sería parecido al de 2025. La institución financiera destacó que durante el primer año de la administración actual el incremento ha sido más moderado, de 12 por ciento. Así, el salario mínimo se ha recuperado hasta alcanzar 8 mil 475 pesos mensuales en el periodo enero-septiembre de 2025. Así mismo, enfatizó que la presidenta ha propuesto una ambiciosa política salarial que busca llevar el salario mínimo durante su sexenio a un monto equivalente a 2.5 canastas básicas (de alimentos y servicios) para garantizar que se cubra el costo de esta canasta para cada integrante de un hogar de 4 personas.",
+  "autor": {
+    "id": "6373a45c80583b48877c902c",
+    "nombre": "Stefany Yedra"
+  },
+  "categoria": "Economía",
+  "etiquetas": ["Salario Mínimo", "Economía", "México", "Aumento Salarial", "Banamex", "Claudia Sheinbaum"],
+  "fecha_publicacion": "2025-11-14T14:30:00.000Z",
+  "imagen_url": null
+},
+
+{
+  "titulo": "Prevén ocupación hotelera del 94% en León por FIG",
+  "contenido": "El Sector Hotelero de León prevé una ocupación del 94 por ciento por la celebración del Festival Internacional del Globo (FIG), informó Eduardo Bujaidar. El empresario compartió que este viernes 14 de noviembre se logró una ocupación del 95%, mientras que para el sábado 15 se reflejó un 100% y aunque las reservaciones para el día domingo 16 van a la baja se espera tener un cierre global similar al del año anterior.",
+  "autor": {
+    "id": "6373a45c80583b48877c902c",
+    "nombre": "Stefany Yedra"
+  },
+  "categoria": "Economía",
+  "etiquetas": ["Ocupación Hotelera", "León", "FIG 2025", "Turismo", "Economía"],
+  "fecha_publicacion": "2025-11-14T15:30:00.000Z",
+  "imagen_url": null
+},
+
+{
+  "titulo": "Universidad de Guanajuato conforma comisión para renovar su Junta Directiva",
+  "contenido": "Durante una sesión que se prolongó por más de seis horas este viernes 14 de noviembre, el Consejo General Universitario de la Universidad de Guanajuato designó a las personas que integrarán la comisión especial encargada de conducir el proceso de elección de cuatro integrantes internos y tres integrantes externos de la Junta Directiva de la Universidad de Guanajuato para el periodo 2026-2028. La Junta Directiva está integrada por 11 miembros electos por el Consejo General Universitario; ocho pertenecen a la Universidad y tres son externos. En enero de 2026 se generarán cuatro vacantes de integrantes internos y tres de integrantes externos porque sus periodos concluyen el 31 de enero.",
+  "autor": {
+    "id": "6373a4b980583b48877c903a",
+    "nombre": "Héctor Almaguer"
+  },
+  "categoria": "Política",
+  "etiquetas": ["Universidad de Guanajuato", "UG", "Junta Directiva", "Educación", "Guanajuato Capital"],
+  "fecha_publicacion": "2025-11-14T20:00:00.000Z",
+  "imagen_url": null
+},
+
+{
+  "titulo": "Incendios de maquinaria en la colonia Jardines de Celaya estarían ligados a extorsiones",
+  "contenido": "Las investigaciones por extorsiones en Celaya avanzan y los recientes ataques contra maquinaria y vehículos de constructoras estarían ligados a este delito. La maquinaria que personas desconocidas quemaron en la colonia Jardines no pertenece a la Junta Municipal de Agua Potable y Alcantarillado (Jumapa), sino a una empresa constructora que presuntamente es víctima de extorsión, confirmó el alcalde Juan Miguel Ramírez Sánchez. Ramírez Sánchez también confirmó que las camionetas incendiadas el pasado martes en la colonia Álamos serían de otra empresa constructora que trabaja para el municipio.",
+  "autor": {
+    "id": "6373a38f80583b48877c900e",
+    "nombre": "Luz Zárate"
+  },
+  "categoria": "Política",
+  "etiquetas": ["Seguridad", "Extorsión", "Celaya", "Incendio", "Constructoras", "Jardines de Celaya"],
+  "fecha_publicacion": "2025-11-14T20:30:00.000Z",
+  "imagen_url": null
+},
+
+{
+  "titulo": "Milagrosa clasificación de México en el Mundial Sub-17: ¡pasó por “fair play” y jugará ante Argentina!",
+  "contenido": "No está escrito el último capítulo de la participación de la selección de México en el Mundial Sub-17 de Qatar. Los aztecas recibieron un regalo inesperado este martes: la clasificación a los dieciseisavos de final cuando todo parecía perdido. El Tri no hizo pie en la fase de grupos, donde perdió en el debut ante Corea del Sur por 2-1, venció a Costa de Marfil por 1-0 y volvió a caer ante Suiza por 3-1. La derrota ante los helvéticos parecía empezar a sellar el boleto de vuelta a casa.",
+  "autor": {
+    "id": "6373a50e80583b48877c9049",
+    "nombre": "Federico Leiva, CNN en Español"
+  },
+  "categoria": "Deportes",
+  "etiquetas": ["Mundial Sub-17", "Selección de México", "Futbol", "Qatar", "Clasificación", "Argentina"],
+  "fecha_publicacion": "2025-11-11T22:08:00.000Z",
+  "imagen_url": null
+},
+
+{
+  "titulo": "Los riesgos de la reforma aduanera en México",
+  "contenido": "Luego del escándalo de contrabando de combustible en las aduanas de México, donde marinos y agentes aduanales estuvieron involucrados, el congreso mexicano aprobó una nueva legislación para regular el control de las aduanas en el país con el objetivo de generar mayor recaudación y transparentar las operaciones. Sin embargo, los sectores productivos del país advierten que los cambios podrían ser contraproducentes porque requieren mayor instrumentación y entrenamiento adicional en un área que, según la Cámara Internacional de Comercio, aporta más del 30% del PIB anual. Expertos en el tema abordan estas preocupaciones y elaboran posibles escenarios para la entrada en vigor de la ley a partir del 1 de enero del 2026.",
+  "autor": {
+    "id": "6373a55e80583b48877c9058",
+    "nombre": "Mario González, CNN en Español"
+  },
+  "categoria": "Economía",
+  "etiquetas": ["Reforma Aduanera", "México", "Economía", "Congreso", "Aduanas", "Contrabando", "Política"],
+  "fecha_publicacion": "2025-11-06T02:18:00.000Z",
+  "imagen_url": null
+},
+
+{
+  "titulo": "¿Cuánto dinero te descuenta el SAT de tu aguinaldo? Aquí te lo decimos",
+  "contenido": "Con la llegada de diciembre, el aguinaldo se convierte en una de las prestaciones más esperadas por las y los trabajadores en México. La ley establece que debe entregarse antes del 20 de diciembre, pero no todos saben que este ingreso puede estar sujeto al pago de Impuesto Sobre la Renta (ISR). De acuerdo con la Profedet, el aguinaldo puede generar retenciones del ISR, aunque esto depende del monto recibido. Para 2025, el SAT no ha emitido cambios en las reglas fiscales; todo se mantiene conforme a lo establecido por la Ley del ISR. El aguinaldo está exento de impuestos hasta el equivalente a 30 UMAs, lo que para este año corresponde a $3,394.2 pesos, considerando que la UMA vale $113.14 pesos.",
+  "autor": {
+    "id": "6373a62f80583b48877c907a",
+    "nombre": "Leia Olivares"
+  },
+  "categoria": "Economía",
+  "etiquetas": ["SAT", "Aguinaldo", "Impuestos", "ISR", "Economía", "UMA", "México"],
+  "fecha_publicacion": "2025-11-14T16:00:00.000Z",
+  "imagen_url": null
+},
+
+{
+  "titulo": "Agricultores llegan a acuerdos, pero se mantiene la promesa de paro, ¿qué se sabe?",
+  "contenido": "Los productores de maíz y caña de azúcar han avanzado en hacerse escuchar en mesas de diálogo e incluso han pactado acuerdos con las autoridades correspondientes federales, sin embargo, se espera avanzar en soluciones concretas antes del paro de agricultores el 24 de noviembre. Los esfuerzos por frenar las movilizaciones de los agricultores mantienen a las autoridades federales y estatales en trabajos conjuntos para crear apoyos e intentar fijar precios beneficiosos. Los agricultores de maíz pactaron dos acuerdos con el titular de la Secretaría de Agricultura y Desarrollo Urbano, Julio Berdaguer, en el Congreso de la Unión. El martes 12, los productores de maíz entraron al Congreso de la Unión, donde acordaron reunirse en la Cámara de Diputados para revisar los artículos conflictivos de la Ley de Aguas Nacionales y avanzar en la creación de un nuevo modelo de agricultura para todo el país. De acuerdo con Eraclio ‘Yako’ Rodróguez, líder del Frente Nacional para el Rescate del Campo (FNRCM), uno de los acuerdos fue establecer dos mesas de diálogo. El segundo acuerdo consiste en instalar una mesa de trabajo para construir un nuevo sistema de agricultura nacional.",
+  "autor": {
+    "id": "6373a68d80583b48877c9089",
+    "nombre": "Gisela Zavala"
+  },
+  "categoria": "Política",
+  "etiquetas": ["Agricultores", "Paro", "Guanajuato", "Maíz", "Caña de Azúcar", "Gobierno Federal", "Congreso de la Unión", "Economía"],
+  "fecha_publicacion": "2025-11-14T21:00:00.000Z",
+  "imagen_url": null
+},
+
+{
+  "titulo": "Fuerte sismo de 6.7 pone en alerta a Japón por tsunami en zonas costeras del país",
+  "contenido": "El gobierno de Japón emitió una alerta de tsunami después de que un sismo de magnitud 6.7 sacudiera la costa noreste del país frente a Iwate en la región del Pacífico Norte. El movimiento telúrico ocurrió a las 17:03 horas (tiempo local), con epicentro en el mar y una profundidad estimada de 10 kilómetros (km). La Agencia Meteorológica de Japón (JMA) informó que el temblor alcanzó una intensidad de cuatro en la escala sísmica japonesa en puntos como la ciudad de Morioka. “La alerta de tsunami se ha emitido para la costa de Iwate”, señaló la agencia, que advirtió sobre posibles olas de hasta un metro. La cadena NHK reportó que ya se observaron olas en alta mar e instó a la población a mantenerse alejada de la costa. Horas antes, la misma zona había registrado seis sismos en alta mar con magnitudes entre 4.8 y 5.8.",
+  "autor": {
+    "id": "6373a6e980583b48877c909a",
+    "nombre": "Ericka Ruiz"
+  },
+  "categoria": "Ciencia",
+  "etiquetas": ["Japón", "Sismo", "Tsunami", "Alerta Tsunami", "Iwate", "Terremoto"],
+  "fecha_publicacion": "2025-11-09T08:03:00.000Z",
+  "imagen_url": null
+},
+
+{
+  "titulo": "¿Quién es Zohran Mamdani, el primer alcalde musulmán en la historia de Nueva York?",
+  "contenido": "Este martes por la noche, Zohran Mamdani logró una victoria que hace historia al convertirse en el primer alcalde musulmán de la ciudad de Nueva York, con aproximadamente el 50.4 % de los votos frente al 41.4 % que obtuvo Andrew Cuomo, según los datos reportados con cerca del 90 % del escrutinio. Nacido en Uganda y de ascendencia india, Mamdani tiene 34 años y llegó como niño a Estados Unidos; obtuvo la ciudadanía en 2018. Su campaña se centró en una agenda progresista: planteó congelar rentas, ofrecer transporte público gratuito, aumentar el salario mínimo a 30 dólares la hora para 2030 y crear supermercados municipales con precios de mayorista. Durante la recta final de la contienda, Mamdani enfrentó ataques por su fe musulmana y sus raíces inmigrantes. El comunicado oficial señala que el triunfo de Mamdani no solo simboliza un hito religioso (primero musulmán, primero sudasiático) sino también generacional: es el alcalde más joven de la ciudad desde hace más de un siglo.",
+  "autor": {
+    "id": "6373a62f80583b48877c907a",
+    "nombre": "Leia Olivares"
+  },
+  "categoria": "Política",
+  "etiquetas": ["Zohran Mamdani", "Nueva York", "Elecciones", "Alcalde", "Política", "Musulmán", "Andrew Cuomo"],
+  "fecha_publicacion": "2025-11-05T14:00:00.000Z",
+  "imagen_url": null
+},
+
+
+
+{
+    "titulo": "Inicio histórico del FIG 2025: 17 mil personas asisten al 'Opening' en León",
+    "contenido": "Este viernes, más de 200 globos aerostáticos comenzaron a surcar los cielos de León desde el Parque Metropolitano. El 'Opening' del Festival Internacional del Globo 2025 rompió récord con 17 mil asistentes en cinco sedes simultáneas, disfrutando de música y espectáculos.",
+    "autor": {
+      "id": "6373b1a8d80583b48877c92b",
+      "nombre": "Redacción Milenio"
+    },
+    "categoria": "Cultura",
+    "etiquetas": ["FIG 2025", "León", "Turismo", "Globos Aerostáticos"],
+    "fecha_publicacion": "2025-11-14T10:00:00.000Z",
+    "imagen_url": null
+  },
+
+  {
+    "titulo": "Ataque armado contra familia en San Juan de Retana, Irapuato, deja tres muertos",
+    "contenido": "Un ataque armado contra una familia en la colonia San Juan de Retana, en Irapuato, dejó un saldo de tres personas muertas y una herida. Elementos de la Policía Municipal acudieron al domicilio tras el reporte y encontraron a las cuatro víctimas con heridas de bala.",
+    "autor": {
+      "id": "6373b1a8d80583b48877c92c",
+      "nombre": "Redacción Milenio"
+    },
+    "categoria": "Política",
+    "etiquetas": ["Seguridad", "Irapuato", "San Juan de Retana", "Homicidio"],
+    "fecha_publicacion": "2025-11-11T21:00:00.000Z",
+    "imagen_url": null
+  },
+
+  {
+    "titulo": "Queman tercer vehículo en Celaya en dos días; investigan si fue provocado",
+    "contenido": "Un vehículo fue incendiado en la colonia Ejidal de Celaya, marcando el tercer caso de este tipo en solo dos días. Testigos en la zona comentaron que dos personas se acercaron al predio para prenderle fuego y después huir. Autoridades investigan si los siniestros fueron provocados.",
+    "autor": {
+      "id": "6373b1a8d80583b48877c92d",
+      "nombre": "El Sol del Bajío"
+    },
+    "categoria": "Política",
+    "etiquetas": ["Seguridad", "Celaya", "Incendio", "Colonia Ejidal"],
+    "fecha_publicacion": "2025-11-14T09:00:00.000Z",
+    "imagen_url": null
+  },
+
+  {
+    "titulo": "CNTE levanta campamento en San Lázaro tras 48 horas de protesta",
+    "contenido": "Miembros de la Coordinadora Nacional de los Trabajadores de la Educación (CNTE) comenzaron a levantar el campamento que mantenían en las afueras de la Cámara de Diputados en San Lázaro, Ciudad de México, tras 48 horas de protestas para exigir diálogo con el gobierno.",
+    "autor": {
+      "id": "6373b1a8d80583b48877c92e",
+      "nombre": "N+ Noticias"
+    },
+    "categoria": "Política",
+    "etiquetas": ["CNTE", "Protesta", "CDMX", "San Lázaro", "Maestros"],
+    "fecha_publicacion": "2025-11-14T01:59:00.000Z",
+    "imagen_url": null
+  },
+
+  {
+    "titulo": "'Superpeso' se fortalece: Dólar cae a su valor más bajo en un mes",
+    "contenido": "El peso mexicano suma cinco jornadas consecutivas con ganancias frente al dólar, alcanzando su valor más bajo en un mes. Analistas de Monex atribuyen la caída del dólar a la debilidad de la divisa estadounidense y al atractivo de monedas emergentes, a pesar de datos de producción industrial en México que cayeron 2.4% anual.",
+    "autor": {
+      "id": "6373b1a8d80583b48877c92f",
+      "nombre": "Infobae"
+    },
+    "categoria": "Economía",
+    "etiquetas": ["Peso Mexicano", "Dólar", "Tipo de Cambio", "Economía", "Monex"],
+    "fecha_publicacion": "2025-11-11T08:51:00.000Z",
+    "imagen_url": null
+  },
+
+  {
+
+    "titulo": "Bolsa Mexicana de Valores rompe racha de dos semanas de avances y cierra con pérdidas",
+    "contenido": "La Bolsa Mexicana de Valores (BMV) registró una jornada negativa, rompiendo una racha de dos semanas consecutivas de avances. El principal índice accionario se vio afectado por la toma de utilidades y la cautela de los inversionistas ante el panorama económico.",
+    "autor": {
+      "id": "6373b1a8d80583b48877c930",
+      "nombre": "El Informador"
+    },
+    "categoria": "Economía",
+    "etiquetas": ["BMV", "Economía", "Acciones", "Mercados"],
+    "fecha_publicacion": "2025-11-14T20:00:00.000Z",
+    "imagen_url": null
+  },
+
+  {
+    "titulo": "Observatorio Vera C. Rubin en Chile iniciará estudio del cielo sur en 2025",
+    "contenido": "El Observatorio Vera C. Rubin en Chile, equipado con la cámara digital más grande jamás fabricada para la astronomía (3.2 megapíxeles), comenzará su estudio planificado de todo el cielo del hemisferio sur. Los científicos esperan descubrir numerosos fenómenos transitorios y asteroides cercanos a la Tierra.",
+    "autor": {
+      "id": "6373b1a8d80583b48877c931",
+      "nombre": "El Economista"
+    },
+    "categoria": "Ciencia",
+    "etiquetas": ["Astronomía", "Telescopio", "Vera C. Rubin", "Chile", "Ciencia"],
+    "fecha_publicacion": "2025-11-10T12:00:00.000Z",
+    "imagen_url": null
+  },
+
+  {
+    "titulo": "Brasil libera mosquitos modificados para combatir el dengue y zika",
+    "contenido": "Como parte de un hito en el control de enfermedades, una fábrica en Brasil liberará mosquitos producidos en masa infectados con una cepa bacteriana (Wolbachia) que les impide transmitir virus patógenos. El objetivo es que estos mosquitos suplanten a los naturales, protegiendo a millones de personas del dengue y zika.",
+    "autor": {
+      "id": "6373b1a8d80583b48877c932",
+      "nombre": "El Economista"
+    },
+    "categoria": "Ciencia",
+    "etiquetas": ["Salud", "Dengue", "Zika", "Mosquitos", "Innovación", "Brasil"],
+    "fecha_publicacion": "2025-11-11T14:00:00.000Z",
+    "imagen_url": null
+  },
+
+  {
+    "titulo": "Atlético de Madrid ficha al juvenil mexicano Ronaldo Nájera",
+    "contenido": "El club español Atlético de Madrid hizo oficial el fichaje del futbolista mexicano Ronaldo Nájera. El joven talento se incorporará a las categorías inferiores del equipo colchonero, buscando desarrollar su carrera en el fútbol europeo.",
+    "autor": {
+      "id": "6373b1a8d80583b48877c933",
+      "nombre": "N+ Deportes"
+    },
+    "categoria": "Deportes",
+    "etiquetas": ["Futbol", "Fichajes", "Atlético de Madrid", "Mexicanos en Europa", "Ronaldo Nájera"],
+    "fecha_publicacion": "2025-11-14T11:00:00.000Z",
+    "imagen_url": null
+  },
+
+  {
+    "titulo": "América Femenil golpea primero y toma ventaja sobre Chivas en Semifinal de Ida",
+    "contenido": "El potencial ofensivo de las Águilas del América Femenil quedó demostrado al tomar ventaja en la semifinal de ida contra Chivas. Scarlett Camberos abrió el marcador apenas a los dos minutos del encuentro, definiendo a quemarropa para darle la delantera a su equipo en el Clásico Nacional.",
+    "autor": {
+      "id": "6373b1a8d80583b48877c934",
+      "nombre": "La Jornada"
+    },
+    "categoria": "Deportes",
+    "etiquetas": ["Liga MX Femenil", "América", "Chivas", "Futbol", "Semifinal"],
+    "fecha_publicacion": "2025-11-13T22:00:00.000Z",
+    "imagen_url": null
+  },
+
+  {
+    "titulo": "España impone multa histórica por creación de 'deepfakes' de menores con IA",
+    "contenido": "El gobierno de España ha impuesto una multa histórica a una plataforma en línea por permitir y facilitar la creación de 'deepfakes' de connotación sexual utilizando imágenes de menores de edad. Esta acción marca un precedente en la lucha contra el uso malintencionado de la inteligencia artificial.",
+    "autor": {
+      "id": "6373b1a8d80583b48877c935",
+      "nombre": "N+ Internacional"
+    },
+    "categoria": "Tecnología",
+    "etiquetas": ["Inteligencia Artificial", "Deepfake", "España", "Regulación", "Seguridad"],
+    "fecha_publicacion": "2025-11-14T02:09:00.000Z",
+    "imagen_url": null
+  },
+
+  {
+    "titulo": "Rusia propone plan de paz alternativo para Gaza en la ONU",
+    "contenido": "Rusia ha propuesto una alternativa al plan de paz para Gaza impulsado por Estados Unidos en el Consejo de Seguridad de la ONU. Moscú argumenta que su propuesta busca una 'estabilidad más duradera' en la región, en un movimiento que desafía la diplomacia estadounidense.",
+    "autor": {
+      "id": "6373b1a8d80583b48877c936",
+      "nombre": "La Razón"
+    },
+    "categoria": "Política",
+    "etiquetas": ["Internacional", "Rusia", "Gaza", "ONU", "Estados Unidos"],
+    "fecha_publicacion": "2025-11-14T18:00:00.000Z",
+    "imagen_url": null
+  },
+
+  {
+    "titulo": "Impulsan CRT y Guanajuato la producción de agave libre de deforestación",
+    "contenido": "El Consejo Regulador del Tequila (CRT) y el Gobierno de Guanajuato han firmado un convenio para impulsar la producción de agave 'Tequilana Weber' que esté certificado como libre de deforestación. Esta medida busca proteger los bosques del estado y promover la sostenibilidad en la industria tequilera.",
+    "autor": {
+      "id": "6373b1a8d80583b48877c937",
+      "nombre": "El Informador"
+    },
+    "categoria": "Economía",
+    "etiquetas": ["Agave", "Tequila", "Sostenibilidad", "Guanajuato", "Medio Ambiente"],
+    "fecha_publicacion": "2025-10-23T15:05:00.000Z",
+    "imagen_url": null
+  },
+
+  {
+    "titulo": "Asesinan a Hermenegildo Vázquez, delegado de la comunidad de Sotelo en Guanajuato",
+    "contenido": "Hermenegildo Vázquez, quien se desempeñaba como delegado de la comunidad de Sotelo en el estado de Guanajuato, fue asesinado. Las autoridades han iniciado una investigación para esclarecer los motivos del crimen y dar con los responsables.",
+    "autor": {
+      "id": "6373b1a8d80583b48877c938",
+      "nombre": "El Informador"
+    },
+    "categoria": "Política",
+    "etiquetas": ["Seguridad", "Guanajuato", "Homicidio", "Sotelo"],
+    "fecha_publicacion": "2025-11-14T00:00:00.000Z",
+    "imagen_url": null
+  },
+
+  {
+    "titulo": "C4 de Celaya se queda sin internet; operan 'a la antigüita' por fallas",
+    "contenido": "El C4 de Celaya experimentó una falla masiva de internet, obligando al personal a brindar servicio de emergencias 'a la antigüita'. El director del C4 explicó que, pese a la falta de internet, el servicio a la ciudadanía no se interrumpió gracias a la coordinación del personal y sistemas alternativos de radio.",
+    "autor": {
+      "id": "6373b1a8d80583b48877c939",
+      "nombre": "El Sol del Bajío"
+    },
+    "categoria": "Tecnología",
+    "etiquetas": ["C4", "Celaya", "Tecnología", "Falla de Internet", "Emergencias"],
+    "fecha_publicacion": "2025-11-13T19:00:00.000Z",
+    "imagen_url": null
+  },
+
+  {
+    "titulo": "Refuerza SSPPC la vigilancia en León por el Buen Fin 2025",
+    "contenido": "La Secretaría de Seguridad, Prevención y Protección Ciudadana (SSPPC) de León ha reforzado la vigilancia en corredores comerciales y zonas bancarias para proteger a los leoneses durante el Buen Fin. Se implementarán operativos especiales para prevenir robos y fraudes.",
+    "autor": {
+      "id": "6373b1a8d80583b48877c93a",
+      "nombre": "Gobierno de León"
+    },
+    "categoria": "Economía",
+    "etiquetas": ["Buen Fin", "León", "Seguridad", "SSPPC"],
+    "fecha_publicacion": "2025-11-12T17:00:00.000Z",
+    "imagen_url": null
+  },
+
+  {
+    "titulo": "León promueve energías limpias con 2 nuevas unidades de transporte eléctrico",
+    "contenido": "El gobierno municipal de León puso en marcha dos nuevas unidades de transporte 100% eléctrico. Esta iniciativa busca promover el uso de energías limpias, reducir la huella de carbono y modernizar el sistema de movilidad de la ciudad.",
+    "autor": {
+      "id": "6373b1a8d80583b48877c93b",
+      "nombre": "Gobierno de León"
+    },
+    "categoria": "Tecnología",
+    "etiquetas": ["Transporte Eléctrico", "León", "Sostenibilidad", "Medio Ambiente"],
+    "fecha_publicacion": "2025-11-13T12:00:00.000Z",
+    "imagen_url": null
+  },
+
+  {
+    "titulo": "'Queda descartada' una intervención militar de EU en México: Sheinbaum",
+    "contenido": "La presidenta Claudia Sheinbaum afirmó que una intervención militar de Estados Unidos en México 'queda descartada'. Esta declaración surge en respuesta a discusiones en el extranjero sobre el papel de las fuerzas armadas estadounidenses en el combate al crimen organizado transnacional.",
+    "autor": {
+      "id": "6373b1a8d80583b48877c93c",
+      "nombre": "El Informador"
+    },
+    "categoria": "Política",
+    "etiquetas": ["Claudia Sheinbaum", "México", "Estados Unidos", "Soberanía", "Política Exterior"],
+    "fecha_publicacion": "2025-11-14T13:00:00.000Z",
+    "imagen_url": null
+  },
+
+  {
+    "titulo": "UNAM alerta por intensa actividad solar; podría afectar satélites",
+    "contenido": "El Instituto de Geofísica de la UNAM ha emitido una alerta sobre posibles afectaciones a las telecomunicaciones y sistemas satelitales debido a un período de intensa actividad solar. Se monitorean posibles tormentas geomagnéticas que podrían impactar la tecnología en la Tierra.",
+    "autor": {
+      "id": "6373b1a8d80583b48877c93d",
+      "nombre": "El Informador"
+    },
+    "categoria": "Ciencia",
+    "etiquetas": ["UNAM", "Actividad Solar", "Tormenta Geomagnética", "Satélites", "Telecomunicaciones"],
+    "fecha_publicacion": "2025-11-13T16:00:00.000Z",
+    "imagen_url": null
+  },
+
+  {
+    "titulo": "Fallece Vicente Zarazúa, leyenda del tenis mexicano y ex Copa Davis",
+    "contenido": "Vicente Zarazúa, considerado una leyenda del tenis mexicano y ex integrante del equipo Copa Davis, falleció. Además de su destacada carrera deportiva, fue exdirectivo del Club Necaxa. Es tío abuelo de la tenista Renata Zarazúa.",
+    "autor": {
+      "id": "6373b1a8d80583b48877c93e",
+      "nombre": "N+ Deportes"
+    },
+    "categoria": "Deportes",
+    "etiquetas": ["Tenis", "Obituario", "Vicente Zarazúa", "Copa Davis", "Necaxa"],
+    "fecha_publicacion": "2025-11-14T01:25:00.000Z",
+    "imagen_url": null
+  },
+
+  {
+    "titulo": "Suprema Corte falla contra Salinas Pliego; ordena pagar 48 mil millones al SAT",
+    "contenido": "La Suprema Corte de Justicia de la Nación (SCJN) falló en contra del empresario Ricardo Salinas Pliego, ordenando el pago de un adeudo fiscal de 48 mil millones de pesos al Servicio de Administración Tributaria (SAT). El fallo es parte de una larga disputa fiscal.",
+    "autor": {
+      "id": "6373b1a8d80583b48877c93f",
+      "nombre": "Expresa TV"
+    },
+    "categoria": "Economía",
+    "etiquetas": ["SAT", "SCJN", "Salinas Pliego", "Impuestos", "México"],
+    "fecha_publicacion": "2025-11-13T18:00:00.000Z",
+    "imagen_url": null
+  },
+
+  {
+    "titulo": "Florinda Meza estrena la obra “Atrévete a vivir” en Guanajuato",
+    "contenido": "La actriz Florinda Meza estrena su nueva puesta en escena titulada 'Atrévete a vivir'. La presentación marca su regreso a los escenarios teatrales con una historia de comedia y reflexión, iniciando su gira en el estado de Guanajuato.",
+    "autor": {
+      "id": "6373b1a8d80583b48877c940",
+      "nombre": "Expresa TV"
+    },
+    "categoria": "Cultura",
+    "etiquetas": ["Teatro", "Florinda Meza", "Cultura", "Guanajuato"],
+    "fecha_publicacion": "2025-11-13T10:00:00.000Z",
+    "imagen_url": null
+  },
+
+  {
+    "titulo": "Megaoperativo de la FGEG en Silao e Irapuato deja 22 detenidos y arsenal asegurado",
+    "contenido": "La Fiscalía General del Estado de Guanajuato (FGEG) informó los resultados de varios operativos simultáneos en Silao e Irapuato. La acción resultó en la detención de 22 personas y el aseguramiento de un gran arsenal, incluyendo armas largas, equipo táctico y droga.",
+    "autor": {
+      "id": "6373b1a8d80583b48877c941",
+      "nombre": "El Sol del Bajío"
+    },
+    "categoria": "Política",
+    "etiquetas": ["Seguridad", "FGEG", "Operativo", "Silao", "Irapuato", "Detenidos"],
+    "fecha_publicacion": "2025-11-14T08:00:00.000Z",
+    "imagen_url": null
+  },
+
+  {
+    "titulo": "Trump pide investigación federal sobre vínculos entre Epstein y Bill Clinton",
+    "contenido": "El expresidente Donald Trump ha solicitado al Departamento de Justicia que inicie una investigación federal sobre los presuntos vínculos entre el financiero fallecido Jeffrey Epstein y el expresidente Bill Clinton. Esto ocurre tras la reciente publicación de nuevos documentos relacionados con el caso.",
+    "autor": {
+      "id": "6373b1a8d80583b48877c942",
+      "nombre": "N+ Internacional"
+    },
+    "categoria": "Política",
+    "etiquetas": ["Donald Trump", "Jeffrey Epstein", "Bill Clinton", "Estados Unidos", "Política"],
+    "fecha_publicacion": "2025-11-14T03:00:00.000Z",
+    "imagen_url": null
+  }
+
+]
