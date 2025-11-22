@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { requireAuth, requireEditor } from "../middlewares/guard.js";
+import { requireAuth } from "../middlewares/auth.js";
 import { list, getById, create, update, remove, getRecent, getByAutor, search } from "../controllers/articleController.js";
 
 const router = Router();
@@ -13,7 +13,7 @@ router.get("/:id", getById);
 
 // Rutas protegidas
 router.post("/", requireAuth, create);
-router.patch("/:id", requireAuth, update);
-router.delete("/:id", requireEditor, remove);
+router.put("/:id", requireAuth, update);
+router.delete("/:id", requireAuth, remove);
 
 export default router;

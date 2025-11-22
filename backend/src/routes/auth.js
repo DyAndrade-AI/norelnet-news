@@ -6,7 +6,7 @@ import {
   getProfile,
   changePassword,
 } from "../controllers/userController.js";
-import { requireAuth } from "../middlewares/guard.js";
+import { requireAuth } from "../middlewares/auth.js";
 
 // Rutas dedicadas a autenticación para el front (login, register, perfil, etc.)
 const router = Router();

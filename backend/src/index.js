@@ -5,7 +5,7 @@ import cors from "cors";
 import dotenv from "dotenv";
 import { connectDB } from "./database.js";
 import { sessionMiddleware, trustProxy } from "./middlewares/session.js";
-import { error } from "./middlewares/error.js";
+import { errorHandler } from "./middlewares/error.js";
 import mongoose from "mongoose";
 import usersRouter from "./routes/users.js";
 import articlesRouter from "./routes/articles.js";
@@ -34,7 +34,7 @@ app.use("/api/articles", articlesRouter);
 app.use("/api/users", usersRouter);
 app.use("/api/auth", authRouter);
 
-app.use(error);
+app.use(errorHandler);
 
 const port = process.env.PORT || 3000;
 const start = async () => {

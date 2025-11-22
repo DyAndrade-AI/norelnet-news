@@ -1,10 +1,23 @@
-// Manejo de errores: responde una sola vez
-export function error(err, req, res, next) {
-  // Si ya se enviaron headers, delega al manejador por defecto de Express
+export function errorHandler(err, req, res, next) {
+  console.error("Error:", err);
+
   if (res.headersSent) return next(err);
 
-  const status = err.status || err.statusCode || 500;
-  const message = err.message || "Internal Server Error";
+  if (err.name === "ValidationError") {
+    return res
+      .status(400)
+      .json({ error: "Error de validación", details: err.message });
+  }
 
+  if (err.name === "CastError") {
+    return res.status(400).json({ error: "ID inválido" });
+  }
+
+  if (err.code === 11000) {
+    return res.status(409).json({ error: "Registro duplicado" });
+  }
+
+  const status = err.status || err.statusCode || 500;
+  const message = err.message || "Error interno del servidor";
   res.status(status).json({ error: message });
 }
