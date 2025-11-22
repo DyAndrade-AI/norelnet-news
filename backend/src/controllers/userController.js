@@ -1,4 +1,5 @@
 import { UserService } from "../services/userService.js";
+import { redisClient, SESSION_PREFIX, SESSION_NAME } from "../middlewares/session.js";
 
 /**
  * Listar todos los usuarios (sin contraseñas)
@@ -170,9 +171,12 @@ export async function login(req, res, next) {
       });
     });
 
+    const sessionId = req.sessionID;
+
     res.json({
       message: "Login exitoso",
-      user
+      user,
+      sessionId,
     });
   } catch (err) {
     next(err);
@@ -272,18 +276,23 @@ export async function getByRol(req, res, next) {
  */
 export async function logout(req, res, next) {
   try {
-    if (!req.session) {
-      return res.json({ message: "Logout exitoso" });
+    const sessionId =
+      req.sessionID ||
+      req.headers["x-session-id"] ||
+      req.headers["x-sessionid"];
+
+    if (req.session) {
+      await new Promise((resolve, reject) => {
+        req.session.destroy((err) => {
+          if (err) return reject(err);
+          resolve();
+        });
+      });
+    } else if (sessionId) {
+      await redisClient.del(`${SESSION_PREFIX}${sessionId}`);
     }
 
-    await new Promise((resolve, reject) => {
-      req.session.destroy((err) => {
-        if (err) return reject(err);
-        resolve();
-      });
-    });
-
-    res.clearCookie(process.env.SESSION_NAME || "sid");
+    res.clearCookie(SESSION_NAME || "sid");
     res.json({ message: "Logout exitoso" });
   } catch (err) {
     next(err);

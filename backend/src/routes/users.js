@@ -1,11 +1,12 @@
 import { Router } from "express";
-import { requireAuth, requireAdmin } from "../middlewares/guard.js";
+import { requireAuth, requireAdmin } from "../middlewares/auth.js";
 import { list, getById, create, update, remove, login, getProfile, changePassword, getByRol, logout } from "../controllers/userController.js";
 
 const router = Router();
 
 // Registro público
-router.post("/", create);
+router.post("/", create); // compatibilidad
+router.post("/register", create);
 
 // Autenticación
 router.post("/login", login);
@@ -20,6 +21,6 @@ router.delete("/:id", requireAdmin, remove);
 
 // Operaciones sobre el propio usuario
 router.get("/:id", requireAuth, getById);
-router.patch("/:id", requireAuth, update);
+router.put("/:id", requireAuth, update);
 
 export default router;
