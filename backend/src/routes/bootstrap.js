@@ -1,5 +1,5 @@
 import { Router } from "express";
-import User from "../models/user.js";
+import { User } from "../models/user.js";
 import { requireAuth } from "../middlewares/guard.js";
 
 // Endpoint: POST /api/auth/bootstrap-admin

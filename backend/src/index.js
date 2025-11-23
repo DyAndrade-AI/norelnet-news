@@ -4,15 +4,16 @@ import morgan from "morgan";
 import cors from "cors";
 import dotenv from "dotenv";
 import { connectDB } from "./database.js";
-import productRouter from "./routes/products.js";
-import categoriesRouter from "./routes/categories.js";
-import menuRouter from "./routes/menu.js";
+// import productRouter from "./routes/products.js"; // TODO: Implementar (Issue #1)
+// import categoriesRouter from "./routes/categories.js"; // TODO: Implementar (Issue #1)
+// import menuRouter from "./routes/menu.js"; // TODO: Implementar (Issue #1)
 import { sessionMiddleware, trustProxy } from "./middlewares/session.js";
 import authRouter from "./routes/auth.js";
 import { error } from "./middlewares/error.js";
 import mongoose from "mongoose";
 import usersRouter from "./routes/users.js";
 import bootstrapRouter from "./routes/bootstrap.js";
+import articlesRouter from "./routes/articles.js";
 
 // Punto de entrada de la API: configura middlewares y monta cada router.
 
@@ -34,9 +35,10 @@ app.get("/api/health", (_req, res) => {
 });
 
 app.use("/api/auth", authRouter);
-app.use("/api/products", productRouter);
-app.use("/api/categories", categoriesRouter);
-app.use("/api/menu", menuRouter);
+app.use("/api/articles", articlesRouter); // Rutas de noticias con caché Redis
+// app.use("/api/products", productRouter); // TODO: Implementar (Issue #1)
+// app.use("/api/categories", categoriesRouter); // TODO: Implementar (Issue #1)
+// app.use("/api/menu", menuRouter); // TODO: Implementar (Issue #1)
 app.use("/api/users", usersRouter);
 // Reutilizamos el prefijo /api/auth para exponer el bootstrap inicial de admin
 app.use("/api/auth", bootstrapRouter);

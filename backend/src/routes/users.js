@@ -1,5 +1,5 @@
 import { Router } from "express";
-import User from "../models/user.js";
+import { User } from "../models/user.js";
 import { requireAdmin, requireAuth } from "../middlewares/guard.js";
 
 // Rutas administrativas para buscar usuarios y cambiar roles.
