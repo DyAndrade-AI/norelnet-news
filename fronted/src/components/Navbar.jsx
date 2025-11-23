@@ -29,6 +29,7 @@ export default function Navbar() {
 
         <nav className={`links ${open ? "open" : ""}`}>
           <NavLink to="/menu" onClick={closeMenu}>Menú</NavLink>
+          <NavLink to="/news" onClick={closeMenu}>Noticias</NavLink>
           <NavLink to="/reservations" onClick={closeMenu}>Reservaciones</NavLink>
           <a href="tel:+524666881705" onClick={closeMenu}>Llamar</a>
 
