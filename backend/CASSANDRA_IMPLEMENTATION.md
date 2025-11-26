@@ -49,6 +49,13 @@ Se ha implementado un sistema de registro de interacciones de usuarios con notic
 - GET `/api/interactions/trending` - Artículos trending
 - GET `/api/interactions/stats/:articleId` - Estadísticas de artículo
 
+### 5. Historial de Noticias
+
+✅ **articleHistoryService.js + articleController.js**
+- Tabla `article_history` para eventos `created/updated/deleted`
+- Snapshot ligero del artículo y usuario que hizo el cambio
+- Endpoint `GET /api/articles/:id/history` para consultar el historial
+
 ---
 
 ## 🗄️ Modelo de Datos
@@ -89,6 +96,24 @@ CREATE TABLE article_views_by_day (
 **Partition Key:** `date` (YYYY-MM-DD) - Agrupa por día  
 **Clustering Key:** `article_id` - Identifica artículo  
 **Counter:** `view_count` - Incrementa automáticamente
+
+### Tabla: `article_history`
+
+```cql
+CREATE TABLE article_history (
+  article_id TEXT,
+  event_time TIMESTAMP,
+  event_id TIMEUUID,
+  action TEXT,           -- created | updated | deleted
+  user_id TEXT,          -- usuario que hizo el cambio
+  payload TEXT,          -- snapshot ligero en JSON
+  PRIMARY KEY (article_id, event_time, event_id)
+) WITH CLUSTERING ORDER BY (event_time DESC, event_id DESC);
+```
+
+**Partition Key:** `article_id` - Una partición por noticia  
+**Clustering Keys:** `event_time, event_id` - Orden cronológico descendente y único  
+**Payload:** JSON con título, categoría, etiquetas, autor, imagen y campos cambiados
 
 ---
 
@@ -216,6 +241,38 @@ curl http://localhost:3000/api/interactions/stats/507f1f77bcf86cd799439011?days=
 }
 ```
 
+### 6. Ver Historial de una Noticia
+
+```bash
+curl http://localhost:3000/api/articles/507f1f77bcf86cd799439011/history?limit=20
+```
+
+**Respuesta:**
+```json
+{
+  "articleId": "507f1f77bcf86cd799439011",
+  "total": 3,
+  "items": [
+    {
+      "eventTime": "2025-11-23T11:30:00.000Z",
+      "action": "updated",
+      "userId": "673c1234567890abcdef1234",
+      "payload": {
+        "titulo": "Nuevo titular",
+        "categoria": "Tecnología",
+        "etiquetas": ["ai","ml"],
+        "imagen_url": "https://cdn/img.png",
+        "autorId": "673c1234567890abcdef1234",
+        "autorNombre": "Jane Doe",
+        "fecha_publicacion": "2025-11-20T10:00:00.000Z",
+        "resumen": "Lorem ipsum...",
+        "changedFields": ["titulo","etiquetas"]
+      }
+    }
+  ]
+}
+```
+
 ---
 
 ## 🧪 Cómo Probar
@@ -332,6 +389,15 @@ SET view_count = view_count + 1
 WHERE date = '2025-11-23' AND article_id = 'test-article-123';
 ```
 
+### Historial de una noticia
+
+```cql
+SELECT event_time, action, user_id, payload
+FROM norelnet_news.article_history
+WHERE article_id = '507f1f77bcf86cd799439011'
+LIMIT 20;
+```
+
 ---
 
 ## 🚀 Optimizaciones Futuras
@@ -405,6 +471,19 @@ fetch(`/api/interactions/like/${articleId}`, {
 
 // Mostrar trending en homepage
 const trending = await fetch('/api/interactions/trending?limit=5');
+```
+
+### Historial de Noticias (Mongo -> Cassandra)
+
+- ArticleService registra automáticamente en Cassandra cuando se crea, actualiza o elimina una noticia.
+- Para registrar manualmente un evento:
+```javascript
+await ArticleHistoryService.recordEvent({
+  articleId,
+  action: 'updated',
+  userId: req.user._id.toString(),
+  payload: { titulo, categoria, etiquetas }
+});
 ```
 
 ---

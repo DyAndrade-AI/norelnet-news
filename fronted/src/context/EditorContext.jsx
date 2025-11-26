@@ -11,7 +11,10 @@ export function EditorProvider({ children }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    api.get("/api/auth/me").then(r => setUser(r.data.user)).catch(() => setUser(null)).finally(() => setLoading(false));
+    api.get("/api/auth/profile")
+      .then(r => setUser(r.data.user))
+      .catch(() => setUser(null))
+      .finally(() => setLoading(false));
   }, []);
 
   const login = async (email, password) => {
@@ -30,8 +33,8 @@ export function EditorProvider({ children }) {
     setUser(null);
   };
 
-  const isEditor = !!user && (user.role === "editor" || user.role === "admin");
-  const isAdmin = !!user && user.role === "admin";
+  const isEditor = !!user && (user.rol === "editor" || user.rol === "admin");
+  const isAdmin = !!user && user.rol === "admin";
 
   // admin tools
   const searchUsers = async ({ q = "", page = 1, limit = 10 }) => {

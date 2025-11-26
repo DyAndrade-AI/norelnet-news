@@ -42,6 +42,10 @@ export async function create(req, res, next) {
   try {
     const nombre = req.body.nombre ?? req.body.name;
     const { email, password, rol } = req.body;
+    const requester = req.user || req.session?.user;
+    const isAdmin = requester?.rol === "admin";
+    const totalUsers = await UserService.count();
+    const isFirstUser = totalUsers === 0;
     
     // Validación básica
     if (!nombre || !email || !password) {
@@ -65,8 +69,17 @@ export async function create(req, res, next) {
     if (rol && !["lector", "editor", "admin"].includes(rol)) {
       return res.status(400).json({ error: "rol debe ser: lector, editor o admin" });
     }
+
+    // Solo un admin autenticado puede crear otros admin o editores
+    if (!isFirstUser && rol && rol !== "lector" && !isAdmin) {
+      return res.status(403).json({ error: "Solo un administrador puede asignar rol editor/admin" });
+    }
+
+    const finalRol = isFirstUser
+      ? "admin"
+      : (isAdmin && rol ? rol : "lector");
     
-    const created = await UserService.create({ nombre, email, password, rol });
+    const created = await UserService.create({ nombre, email, password, rol: finalRol });
     res.status(201).json(created);
   } catch (err) {
     // Error de email duplicado (MongoDB unique constraint)
@@ -85,6 +98,13 @@ export async function create(req, res, next) {
  */
 export async function update(req, res, next) {
   try {
+    const isAdmin = req.user?.rol === "admin";
+    const isSelf = req.user?._id?.toString?.() === req.params.id;
+
+    if (!isAdmin && !isSelf) {
+      return res.status(403).json({ error: "Solo puedes actualizar tu propio perfil" });
+    }
+
     // Validar email si viene
     if (req.body.email) {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -101,6 +121,10 @@ export async function update(req, res, next) {
     // Validar rol si viene
     if (req.body.rol && !["lector", "editor", "admin"].includes(req.body.rol)) {
       return res.status(400).json({ error: "rol debe ser: lector, editor o admin" });
+    }
+
+    if (req.body.rol && !isAdmin) {
+      return res.status(403).json({ error: "Solo un administrador puede cambiar roles" });
     }
     
     const updated = await UserService.update(req.params.id, req.body);

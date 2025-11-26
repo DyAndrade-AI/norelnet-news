@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useEditor } from "../context/EditorContext";
-import ProductEditor from "./ProductEditor";
+import ArticleEditor from "./ProductEditor";
 
 // Botón flotante visible solo para editores/admins que abre el panel lateral.
 export default function EditorFab() {
@@ -35,7 +35,7 @@ export default function EditorFab() {
       </button>
 
       {/* Panel solo cuando open === true */}
-      {open && <ProductEditor onClose={() => setOpen(false)} />}
+      {open && <ArticleEditor onClose={() => setOpen(false)} />}
     </>
   );
 }

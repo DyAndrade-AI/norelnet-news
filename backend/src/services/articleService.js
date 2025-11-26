@@ -1,5 +1,38 @@
 import { Article } from "../models/article.js";
 import { Cache } from "../utils/cache.js";
+import { ArticleHistoryService } from "./articleHistoryService.js";
+
+function buildHistoryPayload(article, changedFields = []) {
+  if (!article) return {};
+
+  return {
+    titulo: article.titulo,
+    categoria: article.categoria,
+    etiquetas: article.etiquetas || [],
+    imagen_url: article.imagen_url || null,
+    autorId: article.autor?.id?.toString?.() || null,
+    autorNombre: article.autor?.nombre || null,
+    fecha_publicacion: article.fecha_publicacion,
+    resumen: article.contenido ? article.contenido.slice(0, 160) : null,
+    changedFields
+  };
+}
+
+async function recordHistory(article, action, userId, changedFields = []) {
+  if (!article?._id) return;
+
+  try {
+    await ArticleHistoryService.recordEvent({
+      articleId: article._id.toString(),
+      action,
+      userId: userId || article.autor?.id?.toString?.() || "system",
+      payload: buildHistoryPayload(article, changedFields)
+    });
+  } catch (err) {
+    // No afectar el flujo de Mongo si Cassandra falla
+    console.error("No se pudo guardar historial en Cassandra:", err);
+  }
+}
 
 export const ArticleService = {
   /**
@@ -82,11 +115,13 @@ export const ArticleService = {
    */
   async create(payload) {
     const doc = await Article.create(payload);
+    const created = doc.toObject();
+    await recordHistory(created, "created", payload.autor?.id?.toString?.());
     
     // Limpiar caché de artículos al crear uno nuevo
     await Cache.clearArticles();
     
-    return doc.toObject();
+    return created;
   },
 
   /**
@@ -95,12 +130,13 @@ export const ArticleService = {
    * @param {Object} payload - Datos a actualizar
    * @returns {Promise<Object|null>} Noticia actualizada o null
    */
-  async update(id, payload) {
+  async update(id, payload, actor) {
     const updated = await Article.findByIdAndUpdate(id, payload, { new: true }).lean();
     
     if (updated) {
       // Limpiar caché de artículos al actualizar
       await Cache.clearArticles();
+      await recordHistory(updated, "updated", actor?._id?.toString?.(), Object.keys(payload || {}));
     }
     
     return updated;
@@ -111,12 +147,13 @@ export const ArticleService = {
    * @param {string} id - ID de la noticia
    * @returns {Promise<boolean>} true si se eliminó, false si no existía
    */
-  async remove(id) {
+  async remove(id, actor) {
     const deleted = await Article.findByIdAndDelete(id).lean();
     
     if (deleted) {
       // Limpiar caché de artículos al eliminar
       await Cache.clearArticles();
+      await recordHistory(deleted, "deleted", actor?._id?.toString?.());
     }
     
     return !!deleted;
@@ -224,5 +261,16 @@ export const ArticleService = {
     await Cache.set(cacheKey, result);
     
     return result;
+  },
+
+  /**
+   * Obtener historial en Cassandra de una noticia
+   * @param {string} articleId
+   * @param {number} limit
+   * @returns {Promise<Array>}
+   */
+  async getHistory(articleId, limit = 50) {
+    const cappedLimit = Math.min(200, Math.max(1, limit));
+    return ArticleHistoryService.getHistory(articleId, cappedLimit);
   }
 };

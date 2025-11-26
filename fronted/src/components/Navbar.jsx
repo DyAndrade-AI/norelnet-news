@@ -20,17 +20,27 @@ export default function Navbar() {
     <header className="nav">
       <div className="nav-inner container">
         <Link to="/" className="logo" onClick={closeMenu}>
-          Mi Terruño
+          NorelNet News
         </Link>
 
         <div className="nav-search">
-          <MenuSearch />
+          <MenuSearch placeholder="Buscar en NorelNet News…" />
         </div>
 
+        <button className="hamburger" onClick={() => setOpen(o => !o)} aria-label="Abrir menú">
+          <span />
+          <span />
+          <span />
+        </button>
+
         <nav className={`links ${open ? "open" : ""}`}>
-          <NavLink to="/menu" onClick={closeMenu}>Menú</NavLink>
-          <NavLink to="/reservations" onClick={closeMenu}>Reservaciones</NavLink>
-          <a href="tel:+524666881705" onClick={closeMenu}>Llamar</a>
+          <NavLink to="/" onClick={closeMenu}>Portada</NavLink>
+          <NavLink to="/menu" onClick={closeMenu}>Archivo</NavLink>
+          <a href="/#ultimas" onClick={closeMenu}>Últimas</a>
+          <a href="/#analisis" onClick={closeMenu}>Análisis</a>
+          <a href="/#visuales" onClick={closeMenu}>Video</a>
+          <a href="/#boletin" onClick={closeMenu}>Newsletter</a>
+          <NavLink to="/reservations" onClick={closeMenu}>Contacto</NavLink>
 
           {!user ? (
             <button className="nav-btn" onClick={() => setOpenAuth(true)}>

@@ -155,5 +155,13 @@ export const UserService = {
       .select("-password_hash")
       .sort({ fecha_registro: -1 })
       .lean();
+  },
+
+  /**
+   * Número total de usuarios
+   * @returns {Promise<number>}
+   */
+  async count() {
+    return User.countDocuments();
   }
 };

@@ -67,6 +67,19 @@ export async function connectCassandra() {
         PRIMARY KEY (date, article_id)
       )
     `);
+
+    // Tabla de historial de noticias (auditoría)
+    await cassandraClient.execute(`
+      CREATE TABLE IF NOT EXISTS article_history (
+        article_id TEXT,
+        event_time TIMESTAMP,
+        event_id TIMEUUID,
+        action TEXT,
+        user_id TEXT,
+        payload TEXT,
+        PRIMARY KEY (article_id, event_time, event_id)
+      ) WITH CLUSTERING ORDER BY (event_time DESC, event_id DESC)
+    `);
     
     console.log('✓ Cassandra schema creado correctamente');
     

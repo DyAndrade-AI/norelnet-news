@@ -15,6 +15,8 @@ router.post("/register", create);
 router.post("/login", login);
 router.post("/logout", requireAuth, logout);
 router.get("/me", requireAuth, getProfile);
+// Alias para compatibilidad con el frontend
+router.get("/profile", requireAuth, getProfile);
 router.post("/change-password", requireAuth, changePassword);
 
 export default router;

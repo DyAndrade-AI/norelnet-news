@@ -106,7 +106,7 @@ export async function update(req, res, next) {
       }
     }
     
-    const updated = await ArticleService.update(req.params.id, req.body);
+    const updated = await ArticleService.update(req.params.id, req.body, req.user);
     
     if (!updated) {
       return res.status(404).json({ error: "Noticia no encontrada" });
@@ -125,13 +125,32 @@ export async function update(req, res, next) {
  */
 export async function remove(req, res, next) {
   try {
-    const ok = await ArticleService.remove(req.params.id);
+    const ok = await ArticleService.remove(req.params.id, req.user);
     
     if (!ok) {
       return res.status(404).json({ error: "Noticia no encontrada" });
     }
     
     res.status(204).end();
+  } catch (err) {
+    next(err);
+  }
+}
+
+/**
+ * Historial de una noticia (eventos en Cassandra)
+ * GET /api/articles/:id/history?limit=50
+ */
+export async function getHistory(req, res, next) {
+  try {
+    const limit = Math.min(200, Number(req.query.limit) || 50);
+    const items = await ArticleService.getHistory(req.params.id, limit);
+    
+    res.json({
+      articleId: req.params.id,
+      total: items.length,
+      items
+    });
   } catch (err) {
     next(err);
   }

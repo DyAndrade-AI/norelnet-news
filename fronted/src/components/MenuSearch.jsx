@@ -1,8 +1,8 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import Modal from "./Modal";
 
-/* Busca en /api/products?search=... y muestra sugerencias + modal */
-export default function MenuSearch({ placeholder = "Buscar platillos…" }) {
+/* Busca noticias y muestra sugerencias + modal de vista rápida */
+export default function MenuSearch({ placeholder = "Buscar noticias…" }) {
   const [q, setQ] = useState("");
   const [items, setItems] = useState([]);
   const [openList, setOpenList] = useState(false);
@@ -11,22 +11,13 @@ export default function MenuSearch({ placeholder = "Buscar platillos…" }) {
   const inputRef = useRef(null);
   const listRef = useRef(null);
 
-  // Llama a tu backend. Soporta ?search= y, como fallback, ?q=
-  const fetchProducts = async (term, signal) => {
-    const tryUrls = [
-      `/api/products?search=${encodeURIComponent(term)}&page=1`,
-      `/api/products?q=${encodeURIComponent(term)}&page=1`,
-    ];
-    for (const url of tryUrls) {
-      const res = await fetch(url, { signal });
-      if (res.ok) {
-        const data = await res.json();
-        // Tu backend regresa { items: [...], total, page, pages }
-        const arr = Array.isArray(data) ? data : (Array.isArray(data.items) ? data.items : []);
-        return arr;
-      }
-    }
-    return [];
+  // Llama al backend de artículos
+  const fetchArticles = async (term, signal) => {
+    const url = `/api/articles/search?q=${encodeURIComponent(term)}&page=1&limit=8`;
+    const res = await fetch(url, { signal });
+    if (!res.ok) return [];
+    const data = await res.json();
+    return Array.isArray(data?.items) ? data.items : [];
   };
 
   // Debounce de la búsqueda
@@ -37,7 +28,7 @@ export default function MenuSearch({ placeholder = "Buscar platillos…" }) {
 
     const id = setTimeout(async () => {
       try {
-        const arr = await fetchProducts(term, ctrl.signal);
+        const arr = await fetchArticles(term, ctrl.signal);
         setItems(arr);
       } catch {
         /* ignora aborts/errores */
@@ -47,9 +38,7 @@ export default function MenuSearch({ placeholder = "Buscar platillos…" }) {
     return () => { clearTimeout(id); ctrl.abort(); };
   }, [q]);
 
-  // Top 8 resultados
   const results = useMemo(() => items.slice(0, 8), [items]);
-
   useEffect(() => { setHighlight(0); }, [q]);
 
   const pick = (item) => {
@@ -76,12 +65,21 @@ export default function MenuSearch({ placeholder = "Buscar platillos…" }) {
     return () => document.removeEventListener("mousedown", onDocClick);
   }, []);
 
-  // Helpers de UI
-  const fmtPrice = (v) => (typeof v === "number" ? `$${v.toFixed(2)}` : "");
-  const catName = (it) => (it?.categoryId && typeof it.categoryId === "object" ? it.categoryId.name : null);
-  const safeName = (s) => {
+  const safeTitle = (s) => {
     const t = String(s || "").trim();
-    return t && !/^[a-f0-9]{24}$/i.test(t) ? t : "Platillo";
+    return t || "Titular en preparación";
+  };
+  const snippet = (s, max = 160) => {
+    const t = String(s || "").replace(/\s+/g, " ").trim();
+    return t.length > max ? `${t.slice(0, max)}…` : t;
+  };
+  const formatDate = (iso) => {
+    if (!iso) return "Actualizado";
+    try {
+      return new Date(iso).toLocaleDateString("es-MX", { day: "2-digit", month: "short" });
+    } catch {
+      return "Actualizado";
+    }
   };
 
   return (
@@ -94,7 +92,7 @@ export default function MenuSearch({ placeholder = "Buscar platillos…" }) {
           onKeyDown={onKeyDown}
           onFocus={() => q && setOpenList(true)}
           placeholder={placeholder}
-          aria-label="Buscar en menú"
+          aria-label="Buscar noticias"
         />
         <button className="search-btn" onClick={() => setOpenList(v => !!q && !v)}>🔎</button>
 
@@ -108,13 +106,14 @@ export default function MenuSearch({ placeholder = "Buscar platillos…" }) {
                 className={`result-row ${i === highlight ? "active" : ""}`}
                 onMouseEnter={() => setHighlight(i)}
                 onClick={() => pick(it)}
-                title={it.description || it.product_name}
+                title={it.titulo}
               >
                 <div className="result-col">
-                  <div className="result-name">{safeName(it.product_name)}</div>
-                  {catName(it) && <div className="result-cat">{catName(it)}</div>}
+                  <div className="result-name">{safeTitle(it.titulo)}</div>
+                  <div className="result-cat">
+                    {it.categoria || "General"} · {formatDate(it.fecha_publicacion || it.createdAt)}
+                  </div>
                 </div>
-                {it.price != null && <div className="result-price">{fmtPrice(it.price)}</div>}
               </li>
             ))}
           </ul>
@@ -125,34 +124,27 @@ export default function MenuSearch({ placeholder = "Buscar platillos…" }) {
         )}
       </div>
 
-      <Modal open={!!selected} onClose={() => setSelected(null)} ariaLabel={selected?.product_name || "Detalle"}>
+      <Modal open={!!selected} onClose={() => setSelected(null)} ariaLabel={selected?.titulo || "Detalle"}>
         {selected && (
-          <div className="dish-detail">
-            <div className="dish-media">
-              {/* Placeholder temporal porque no tienes imagen aún */}
-              <div className="img-placeholder">
-                <span>{getInitials(safeName(selected.product_name))}</span>
+          <div className="news-detail">
+            <div className="news-detail-head">
+              <p className="eyebrow">{selected.categoria || "NorelNet News"}</p>
+              <h3 style={{ margin: "4px 0 6px" }}>{safeTitle(selected.titulo)}</h3>
+              <p className="subtle">{formatDate(selected.fecha_publicacion || selected.createdAt)}</p>
+            </div>
+            {selected.contenido && (
+              <p className="news-snippet">{snippet(selected.contenido, 420)}</p>
+            )}
+            {Array.isArray(selected.etiquetas) && selected.etiquetas.length > 0 && (
+              <div className="tag-row">
+                {selected.etiquetas.slice(0, 6).map((tag) => (
+                  <span key={tag} className="chip">{tag}</span>
+                ))}
               </div>
-            </div>
-            <div className="dish-info">
-              <h3 style={{ marginTop: 0 }}>
-                {safeName(selected.product_name)}
-                {catName(selected) && <small className="dish-cat"> · {catName(selected)}</small>}
-              </h3>
-              {selected.description && <p className="dish-desc">{selected.description}</p>}
-              {selected.price != null && (
-                <div className="dish-price">{fmtPrice(selected.price)}</div>
-              )}
-            </div>
+            )}
           </div>
         )}
       </Modal>
     </>
   );
-}
-
-/* Iniciales simples para el placeholder */
-function getInitials(s) {
-  const t = String(s || "").trim().split(/\s+/).slice(0, 2);
-  return t.map(x => x[0]?.toUpperCase() || "").join("");
 }
